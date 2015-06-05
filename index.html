@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sax-Ood</title>
+		<style type="text/css">
+			body {
+				background-image: url(images/ood_bg.jpg);
+				background-attachment: fixed;
+				background-size: cover;
+				font-family: Roboto, Arial, Helevetica, sans-serif;
+				color: white;
+				text-align: center;
+			}
+			a,
+			a:visited {
+				color: blue;
+			}
+				a:active {
+					color: darkRed;
+				}
+			
+			#gif {
+				/*color: black;
+				text-shadow: 0px 0px 8px white;*/
+				text-shadow: 0px 0px 8px black;
+			}
+				#gif h1 {
+					font-size: 40px;
+				}
+				#gif img {
+					box-shadow: 0px 0px 16px 8px white;
+					/*box-shadow: 0px 0px 16px 8px black;*/
+				}
+			
+			#links {
+				position: fixed;
+				bottom: -2px;
+				left: 0px;
+				right: 0px;
+				padding-bottom: 0px;
+				padding-top: 2px;
+				font-size: 13px;
+				background-color: white;
+				background-color: rgba(255,255,255,0.4);
+				background: -webkit-linear-gradient(left, rgba(255,255,255,0.4), rgba(255,255,255,0.7));
+				background:    -moz-linear-gradient(left, rgba(255,255,255,0.4), rgba(255,255,255,0.7));
+				background:     -ms-linear-gradient(left, rgba(255,255,255,0.4), rgba(255,255,255,0.7));
+				background:      -o-linear-gradient(left, rgba(255,255,255,0.4), rgba(255,255,255,0.7));
+				background:         linear-gradient(left, rgba(255,255,255,0.4), rgba(255,255,255,0.7));
+				color: black;
+				
+				overflow: visible;
+			}
+		</style>
+		<script type="text/javascript">
+			var oodPics = ["got_them_moves", "ood2", "ood1"],
+				oodPicNum = 0;
+			function nextOodPic() {
+				oodPicNum = ++oodPicNum >= oodPics.length ? 0 : oodPicNum;
+				this.src = 'images/' + oodPics[oodPicNum] + '.gif';
+			}
+			window.onload = function () {
+				document.getElementById('oodPic').onclick = nextOodPic;
+			};
+		</script>
+	</head>
+	<body>
+		<div id="gif">
+			<h1>Sax-Ood-Roll'd</h1>
+			<img src="images/got_them_moves.gif" alt="" id="oodPic" />
+		</div>
+		<audio autoplay="autoplay" loop="loop">
+			<source src="audio/saxroll.mp3" type="audio/mp3"/>
+			<source src="audio/saxroll.ogg" type="audio/ogg"/>
+			Please switch to a browser that supports HTML5 audio
+		</audio>
+		<div id="links">
+			<a href="http://www.youtube.com/watch?v=jHH8UVN0nKI" target="_blank">Watch the <i>Doctor Who</i> Cast and Crew special</a> (seriously, this video will make your day)
+			|
+			<a href="http://zmyaro.com" target="_blank">My website</a>
+			|
+			<!-- +1 button -->
+			<div style="display:inline-block;vertical-align:top;margin-top:-1px;">
+				<div class="g-plusone" data-size="medium" data-href="http://saxood.zmyaro.com"></div>
+			</div>
+			<!-- Like button -->
+			<div style="display:inline-block;vertical-align:top;margin-top:-1px;">
+				<div class="fb-like" data-href="http://saxood.zmyaro.com" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+			</div>
+		</div>
+		<!-- +1 button script -->
+		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		<!-- Facebook API -->
+		<script type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	</body>
+</html>
